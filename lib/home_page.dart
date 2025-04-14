@@ -27,20 +27,7 @@ class HomePage extends StatelessWidget {
         ),
         title: Row(
           children: [
-            Icon(
-              Icons.check_box,
-              color: Colors.blue,
-              size: 30,
-            ),
-            SizedBox(width: 8),
-            Text(
-              'attentify',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.blue,
-              ),
-            ),
+            Image.asset('assets/images/logo.png',width: 200,)
           ],
         ),
         centerTitle: false,

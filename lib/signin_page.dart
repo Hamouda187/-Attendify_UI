@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'home_page.dart';
 
 class SignInPage extends StatefulWidget {
@@ -27,20 +26,7 @@ class _SignInPageState extends State<SignInPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    Icons.check_box,
-                    color: Colors.blue,
-                    size: 40,
-                  ),
-                  SizedBox(width: 8),
-                  Text(
-                    'attentify',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blue,
-                    ),
-                  ),
+                  Image.asset('assets/images/logo.png',width: 400,),
                 ],
               ),
               SizedBox(height: 40),
@@ -56,7 +42,6 @@ class _SignInPageState extends State<SignInPage> {
               ),
               SizedBox(height: 30),
 
-              // ID TextField with Icon
               TextField(
                 decoration: InputDecoration(
                   labelText: 'ID',
@@ -69,14 +54,13 @@ class _SignInPageState extends State<SignInPage> {
                   suffixIcon: Icon(
                     Icons.person,
                     color: Colors.grey,
-                  ), // Added user icon for ID field
+                  ),
                 ),
               ),
               SizedBox(height: 16),
 
-              // Password TextField with Toggleable Eye Icon
               TextField(
-                obscureText: !_isPasswordVisible, // Toggle visibility
+                obscureText: !_isPasswordVisible,
                 decoration: InputDecoration(
                   labelText: 'Password',
                   filled: true,
@@ -102,12 +86,10 @@ class _SignInPageState extends State<SignInPage> {
               ),
               SizedBox(height: 24),
 
-              // Log in Button
               SizedBox(
                 width: 150,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Navigate to HomePage
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => HomePage()),
@@ -134,7 +116,6 @@ class _SignInPageState extends State<SignInPage> {
               // Forgot Password Link
               TextButton(
                 onPressed: () {
-                  // Add your forgot password logic here
                 },
                 child: Text(
                   'Forgot Password?',
